@@ -1,35 +1,16 @@
 PODS:
-  - Flutter (1.0.0)
-  - JitsiMeetSDK (2.1.0)
-  - url_launcher (0.0.1):
-    - Flutter
-  - webview_flutter (0.0.1):
-    - Flutter
+  - JitsiMeetSDK (2.5.3)
 
 DEPENDENCIES:
-  - Flutter (from `.symlinks/flutter/ios-release`)
-  - JitsiMeetSDK (~> 2.1.0)
-  - url_launcher (from `.symlinks/plugins/url_launcher/ios`)
-  - webview_flutter (from `.symlinks/plugins/webview_flutter/ios`)
+  - JitsiMeetSDK (~> 2.5.3)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - JitsiMeetSDK
 
-EXTERNAL SOURCES:
-  Flutter:
-    :path: ".symlinks/flutter/ios-release"
-  url_launcher:
-    :path: ".symlinks/plugins/url_launcher/ios"
-  webview_flutter:
-    :path: ".symlinks/plugins/webview_flutter/ios"
-
 SPEC CHECKSUMS:
-  Flutter: 58dd7d1b27887414a370fcccb9e645c08ffd7a6a
-  JitsiMeetSDK: 3e66564af7f38a19142338955dd7f581801852b3
-  url_launcher: 0067ddb8f10d36786672aa0722a21717dba3a298
-  webview_flutter: 1aa7604e6cdb451a9b7ed2c37d5454c0b440246b
+  JitsiMeetSDK: 0a62228b34f13846d1d18d9b47e8fb046e1d4099
 
-PODFILE CHECKSUM: a01c277ef8910445286bb8c8022223c6e41968fe
+PODFILE CHECKSUM: 3c432119906f5190f4f9540420f95c90e1402152
 
-COCOAPODS: 1.7.3
+COCOAPODS: 1.11.2

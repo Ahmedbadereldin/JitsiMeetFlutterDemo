@@ -23,11 +23,11 @@
     
     [self.view addSubview:jitsiView];
     jitsiView.frame = self.view.bounds;
-    // Join the room.
+    // Join the room.    
     if (JitsiMeet.sharedInstance == nil) {
         JitsiMeetConferenceOptions *defaultOptions
         = [JitsiMeetConferenceOptions fromBuilder:^(JitsiMeetConferenceOptionsBuilder *builder) {
-            builder.serverURL = [NSURL URLWithString:@"https://meet.jit.si"];
+            builder.serverURL = [NSURL URLWithString:@"https://jvcr.cyberx.world"];
             builder.welcomePageEnabled = NO;
         }];
         [JitsiMeet sharedInstance].defaultConferenceOptions = defaultOptions;
@@ -36,6 +36,7 @@
     = [JitsiMeetConferenceOptions fromBuilder:^(JitsiMeetConferenceOptionsBuilder *builder) {
         if (self.option != nil) {
             NSLog(@"builder==%@", self.option);
+            builder.serverURL = [NSURL URLWithString:@"https://jvcr.cyberx.world"];
             builder.room = self.option[@"room"];
             builder.videoMuted = ![[self.option objectForKey:@"video"] boolValue];
             builder.audioMuted = ![[self.option objectForKey:@"audio"] boolValue];

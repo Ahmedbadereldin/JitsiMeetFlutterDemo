@@ -10,7 +10,8 @@ class MyApp extends StatefulWidget{
 
 class _MyAppState extends State<MyApp>{
 
-  TextEditingController _controller;
+  // TextEditingController _controller;
+  TextEditingController _controller = TextEditingController();
 
   @override
   void initState() {
@@ -29,7 +30,7 @@ class _MyAppState extends State<MyApp>{
       ),
       home: Scaffold(
         appBar:  AppBar(
-          title:Text('JitsiMeetFlutterDemo'),
+          title:Text('MeetX'),
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -39,7 +40,7 @@ class _MyAppState extends State<MyApp>{
               controller: _controller,
             ),
             RaisedButton(
-              child: Text('打开JitsiMeet会议'),
+              child: Text('Join To Meeting'),
               onPressed: () {
                 if (_controller.text.isNotEmpty) {
                   var conferenceOption = {

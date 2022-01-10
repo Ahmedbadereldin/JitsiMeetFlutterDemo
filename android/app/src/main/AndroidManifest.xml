@@ -13,13 +13,13 @@
             android:usesCleartextTraffic="true"
             tools:replace="android:label">
 
-        <activity android:name=".Main2Activity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+<!--        <activity android:name=".Main2Activity">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN"/>-->
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
+<!--                <category android:name="android.intent.category.LAUNCHER"/>-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
         <activity
                 android:name=".MainActivity"
                 android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
@@ -27,7 +27,11 @@
                 android:launchMode="singleTop"
                 android:theme="@style/LaunchTheme"
                 android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
 
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
             <!--
                  This keeps the window background of the activity showing
                  until Flutter renders its first frame. It can be removed if
@@ -39,7 +43,6 @@
                     android:value="true"/>
 
         </activity>
-        <activity android:name=".conference.ConferenceActivity"/>
     </application>
 
 </manifest>
