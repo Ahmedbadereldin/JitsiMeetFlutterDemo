@@ -7,7 +7,7 @@ import android.content.IntentFilter;
 import android.os.Bundle;
 import android.util.Log;
 
-import io.flutter.app.FlutterActivity;
+import io.flutter.embedding.android.FlutterActivity;
 import io.flutter.plugin.common.MethodChannel;
 import timber.log.Timber;
 
@@ -57,7 +57,7 @@ public class MainActivity extends FlutterActivity {
 
         //endregion
 
-        new MethodChannel(getFlutterView(), METHOD_CHANNEL).setMethodCallHandler((methodCall, result) -> {
+        new MethodChannel(Objects.requireNonNull(getFlutterEngine()).getDartExecutor().getBinaryMessenger(), METHOD_CHANNEL).setMethodCallHandler((methodCall, result) -> {
             if ("/conference/join".equals(methodCall.method)) {
                 result.success("success");
 
@@ -91,7 +91,6 @@ public class MainActivity extends FlutterActivity {
     @Override
     protected void onDestroy() {
         LocalBroadcastManager.getInstance(this).unregisterReceiver(broadcastReceiver);
-
         super.onDestroy();
     }
 

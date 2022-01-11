@@ -9,17 +9,10 @@
     <application
             android:name="io.flutter.app.FlutterApplication"
             android:icon="@mipmap/ic_launcher"
-            android:label="JitsiMeetFlutterDemo"
+            android:label="MeetX"
             android:usesCleartextTraffic="true"
             tools:replace="android:label">
 
-<!--        <activity android:name=".Main2Activity">-->
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN"/>-->
-
-<!--                <category android:name="android.intent.category.LAUNCHER"/>-->
-<!--            </intent-filter>-->
-<!--        </activity>-->
         <activity
                 android:name=".MainActivity"
                 android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
